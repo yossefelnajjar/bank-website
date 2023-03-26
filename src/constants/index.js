@@ -52,7 +52,7 @@ export const features = [
     icon: send,
     title: "Balance Transfer",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "A balance transfer credit card can save you a lot of money in terms of charges.",
   },
 ];
 
