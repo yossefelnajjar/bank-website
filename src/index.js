@@ -3,7 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import Nav from "./components/Nav.js";
 import Logo from "./assets/logo.svg";
+import bill from "./assets/bill.png";
 import robot from "./assets/robot.png";
+import apple from "./assets/apple.svg";
+import google from "./assets/google.svg";
 
 import { navLinks, stats, features } from "./constants/index";
 // import Home from './components/Home';
@@ -50,7 +53,7 @@ const Home = () => {
           <div className="flex w-full h-full justify-between items-center relative">
             <div className="home-left text-white relative">
               <div className="discount flex justify-between px-2 rounded-xl items-center mb-3 ">
-                <i class="fa-solid fa-tags text-cyan-400"></i>
+                <i className="fa-solid fa-tags text-cyan-400"></i>
                 20% DISCOUNT FOR 1 MONTH ACCOUNT
               </div>
               <div className="home-left-text">
@@ -108,19 +111,22 @@ const Button = (props) => {
 const Features = () => {
   return (
     <div
-      className="max-w-7xl mx-auto px-4 py-20 my-32 flex justify-between"
+      className="max-w-7xl mx-auto px-4 pt-20 my-32 flex justify-between"
       id={navLinks[1].id}>
-      <div className="features-left">
-        <h1 className="text-white text-6xl">
-          You do the business,
-          <br /> we'll handle the money.
-        </h1>
-        <p className="text-m text-stone-400 mt-9">
-          With the right credit card, you can improve your
-          <br /> financial life by building credit, earning rewards and saving
-          money. <br />
-          But with hundreds of credit cards on the market.
-        </p>
+      <div className="features-left flex justify-between flex-col">
+        <div className="text">
+          <h1 className="text-white text-6xl">
+            You do the business,
+            <br /> we'll handle the money.
+          </h1>
+          <p className="text-m text-stone-400 mt-5">
+            With the right credit card, you can improve your
+            <br /> financial life by building credit, earning rewards and saving
+            money. <br />
+            But with hundreds of credit cards on the market.
+          </p>
+        </div>
+        <Button name="contact" />
       </div>
       <div className="features-right">
         {features.map((sec) => {
@@ -128,7 +134,7 @@ const Features = () => {
             <div
               className="features-box flex px-4 py-6 rounded-2xl max-w-lg transition-all duration-300 cursor-default"
               key={sec.id}>
-              <div className="p-5 w-fit h-fit mr-3 bg-slate-900 rounded-full">
+              <div className="p-5 w-fit h-fit mr-3 bg-slate-900 relative rounded-full transition-all duration-300">
                 <img src={sec.icon} alt="icon" />
               </div>
               <div>
@@ -143,6 +149,42 @@ const Features = () => {
   );
 };
 
+/*Download*/
+
+const Download = () => {
+  return (
+    <div
+      className="max-w-7xl mx-auto px-4 pt-20 my-32 flex justify-between"
+      id={navLinks[2].id}>
+      <div className="download-left flex-1">
+        <img src={bill} alt="bill" />
+      </div>
+      <div className="download-right flex justify-center flex-col">
+        <div className="text">
+          <h1 className="text-white text-6xl">
+            Easily control your
+            <br />
+            billing & invoicing.
+          </h1>
+          <p className="text-m text-stone-400 mt-5 mb-12">
+            Elit enim sed massa etiam. Mauris eu adipiscing
+            <br /> ultrices ametodio aenean neque. Fusce ipsum orci
+            <br /> rhoncus aliporttitor integer platea placerat.
+          </p>
+        </div>
+        <div className="flex ">
+          <a href="">
+          <img src={google} alt="bill" />
+          </a>
+          <a href="">
+          <img src={apple} alt="bill" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
@@ -150,7 +192,7 @@ root.render(
     <Home />
     <Stats />
     <Features />
-    <Button name="contact" />
+    <Download />
   </>
 );
 
