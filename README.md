@@ -13,3 +13,8 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 
+### breakpoints
+bp-nav ==> navbar
+bp-logo ==> navbar logo
+bp-h-img ==> home image
+bp-discount ==> home discount

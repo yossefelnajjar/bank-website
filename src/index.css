@@ -1,11 +1,14 @@
-@import "tailwindcss/base";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss/utilities"; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   background-color: black;
-  height          : 1100vh;
   overflow-x      : hidden;
 }
 
@@ -45,9 +48,9 @@ html {
   top       : 0;
   left      : -20rem;
   background: #ffffff;
-  filter    : blur(200px);
-  width     : 100px;
-  height    : 300px;
+  filter    : blur(2000px);
+  width     : 50px;
+  height    : 500px;
 }
 
 .home-right {
@@ -66,9 +69,9 @@ html {
   top       : 0;
   left      : 200px;
   background: #c6e0ff;
-  filter    : blur(225px);
+  filter    : blur(500px);
   width     : 100px;
-  height    : 300px;
+  height    : 500px;
 }
 
 .discount {
@@ -109,3 +112,79 @@ html {
 .btn {
   background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
 }
+
+.download-left::before {
+  content   : "";
+  position  : absolute;
+  top       : 10rem;
+  left      : -20rem;
+  background: #ffffff;
+  filter    : blur(5000px);
+  width     : 50px;
+  height    : 700px;
+}
+
+.main-box {
+  background     : linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+  backdrop-filter: blur(5px);
+  border-radius  : 20px;
+}
+
+.main-box::before {
+  content   : "";
+  position  : absolute;
+  top       : 3rem;
+  right     : 3rem;
+  background: #7bd1ff;
+  filter    : blur(5000px);
+  width     : 200px;
+  height    : 200px;
+  z-index   : -1;
+}
+
+.footer-top {
+  border-bottom: 1px solid #6d6d6d50;
+}
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 578px)  {
+  html{
+    font-size: 12px;
+  }
+  .bp-nav{
+    justify-content: center;
+  }
+  .bp-logo {
+    display: none;
+  }
+  .bp-h-img{
+    display: none;
+  }
+  .bp-discount{
+    width: 260px;
+  }
+  .stats{
+    flex-direction: column;
+  }
+  .stats div{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+   .stats div:not(:last-child) {
+    margin-bottom: 20px;
+   }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {}
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) {}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (max-width: 1400px) {}

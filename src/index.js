@@ -2,13 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import Nav from "./components/Nav.js";
-import Logo from "./assets/logo.svg";
+import logo from "./assets/logo.svg";
 import bill from "./assets/bill.png";
 import robot from "./assets/robot.png";
 import apple from "./assets/apple.svg";
 import google from "./assets/google.svg";
+import card from "./assets/card.png";
+import dropbox from "./assets/dropbox.png";
+import airbnb from "./assets/airbnb.png";
 
-import { navLinks, stats, features } from "./constants/index";
+import {
+  navLinks,
+  stats,
+  features,
+  footerLinks,
+  socialMedia,
+} from "./constants/index";
 // import Home from './components/Home';
 
 /*Nav*/
@@ -17,10 +26,10 @@ const Nav = () => {
     <>
       <nav className="w-full top-0 z-10 fixed backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 py-2">
-          <div className="flex items-center justify-between h-8">
-            <div className="w-28">
+          <div className="bp-nav flex items-center justify-between h-8">
+            <div className="w-28 bp-logo">
               <a href="#home">
-                <img src={Logo} alt="logo" />
+                <img src={logo} alt="logo" />
               </a>
             </div>
             <div className="flex space-x-7 font-light" id="nav_Links">
@@ -52,7 +61,7 @@ const Home = () => {
         <div className="absolute top-8 w-full h-full">
           <div className="flex w-full h-full justify-between items-center relative">
             <div className="home-left text-white relative">
-              <div className="discount flex justify-between px-2 rounded-xl items-center mb-3 ">
+              <div className="discount flex justify-between px-2 rounded-xl items-center mb-3 bp-discount">
                 <i className="fa-solid fa-tags text-cyan-400"></i>
                 20% DISCOUNT FOR 1 MONTH ACCOUNT
               </div>
@@ -63,14 +72,15 @@ const Home = () => {
                   <br /> Payment Method.
                 </h1>
                 <p className="text-m text-stone-400 mt-9">
-                  Our team of experts uses a methodology to identify the credit
-                  cards most likely to fit your needs.
+                  Our team of experts uses a methodology to identify br
+                  <br />
+                  the credit cards most likely to fit your needs.
                   <br />
                   We examine annual percentage rates, annual fees.
                 </p>
               </div>
             </div>
-            <div className="home-right text-white -m-8">
+            <div className="home-right text-white -m-8 bp-h-img">
               <img src={robot} alt="robot" className="robot-img" />
             </div>
           </div>
@@ -150,13 +160,12 @@ const Features = () => {
 };
 
 /*Download*/
-
 const Download = () => {
   return (
     <div
       className="max-w-7xl mx-auto px-4 pt-20 my-32 flex justify-between"
       id={navLinks[2].id}>
-      <div className="download-left flex-1">
+      <div className="download-left flex-1 relative">
         <img src={bill} alt="bill" />
       </div>
       <div className="download-right flex justify-center flex-col">
@@ -172,16 +181,138 @@ const Download = () => {
             <br /> rhoncus aliporttitor integer platea placerat.
           </p>
         </div>
-        <div className="flex ">
+        <div className="flex">
           <a href="">
-          <img src={google} alt="bill" />
+            <img src={google} alt="bill" />
           </a>
           <a href="">
-          <img src={apple} alt="bill" />
+            <img src={apple} alt="bill" />
           </a>
         </div>
       </div>
     </div>
+  );
+};
+
+/*Deal*/
+const Deal = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-4 pt-20 my-32 flex justify-between">
+      <div className="Deal-left flex justify-center flex-col">
+        <div className="text">
+          <h1 className="text-white text-6xl">
+            Find a better card deal
+            <br />
+            in few easy steps.
+          </h1>
+          <p className="text-m text-stone-400 mt-5 mb-12">
+            Arcu tortor, purus in mattis at sed integer faucibus.
+            <br />
+            Aliquet quis aliquet eget mauris tortor.ç Aliquet ultrices
+            ac,ametau.
+          </p>
+        </div>
+        <Button name="Get Started" />
+      </div>
+      <div className="Deal-right w-2/5">
+        <img src={card} alt="card" />
+      </div>
+    </div>
+  );
+};
+
+/*Partners*/
+const Partners = () => {
+  return (
+    <div
+      className="max-w-7xl mx-auto px-4 pt-20 my-32 flex justify-center flex-col items-center"
+      id={navLinks[3].id}>
+      <h1 className="text-white text-4xl mb-10">Trusted By Top Companies</h1>
+      <div className="companies flex justify-center items-center">
+        <div className="mr-10 w-80">
+          <img src={dropbox} alt="dropbox" />
+        </div>
+        <div className="w-64">
+          <img src={airbnb} alt="airbnb" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/*Try*/
+const Try = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-4 pt-20 my-32 flex items-center justify-center">
+      <div className="main-box flex justify-between items-center py-20 px-20 w-full">
+        <div className="main-box-text">
+          <h1 className="text-white text-4xl mb-10">
+            Let's try our service now!
+          </h1>
+          <p className="text-m text-stone-400 mt-5 mb-12">
+            Everything you need to accept card payments
+            <br />
+            and grow your business anywhere on the planet.
+          </p>
+        </div>
+        <Button name="Get Started" />
+      </div>
+    </div>
+  );
+};
+
+/*Footer*/
+const Footer = () => {
+  return (
+    <footer className="bg-black max-w-7xl mt-32 px-4 pt-10 mx-auto">
+      <div className="">
+        <div className="footer-top flex c w-full">
+          <div className="footer-top-left">
+            <img src={logo} alt="logo" />
+            <p className="text-m text-stone-600 mt-10 mb-12">
+              A new way to make the payments easy,
+              <br />
+              reliable and secure.
+            </p>
+          </div>
+          <div className="footer-top-right  ml-52 flex flex-1 justify-between">
+            {footerLinks.map((list) => {
+              return (
+                <div className="link-column" key={list.title}>
+                  <h3 className="text-white mb-5">{list.title}</h3>
+                  {list.links.map((link) => {
+                    return (
+                      <a href={link.link} key={link.name}>
+                        <div className="text-stone-400 hover:text-teal-400 transition-all">
+                          {link.name}
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="footer-bottom flex justify-between my-4">
+          <div className="footer-bottom-left text-gray-500">
+            Copyright© {new Date().getFullYear()} HooBank. All Rights Reserved.
+          </div>
+          <div className="footer-bottom-right flex ">
+            {socialMedia.map((social) => {
+              return (
+                <a
+                  href={social.link}
+                  key={social.id}
+                  className="ml-3 hover:opacity-75 transition-all duration-300">
+                  <img src={social.icon} alt="social media icon" />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
@@ -193,6 +324,10 @@ root.render(
     <Stats />
     <Features />
     <Download />
+    <Deal />
+    <Partners />
+    <Try />
+    <Footer />
   </>
 );
 
