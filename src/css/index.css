@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   overflow-x      : hidden;
 }
 
@@ -54,9 +54,19 @@ html {
 }
 
 .home-right {
-  margin  : -300px;
-  position: relative;
+  margin: -340px;
+}
 
+@media (max-width: 1700px) {
+  .home-right {
+    margin: -210px;
+  }
+}
+
+@media (max-width: 1384px) {
+  .home-right {
+    display: none;
+  }
 }
 
 .robot-img {
@@ -148,43 +158,8 @@ html {
 
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (max-width: 578px)  {
-  html{
+@media (max-width: 480px) {
+  html {
     font-size: 12px;
   }
-  .bp-nav{
-    justify-content: center;
-  }
-  .bp-logo {
-    display: none;
-  }
-  .bp-h-img{
-    display: none;
-  }
-  .bp-discount{
-    width: 260px;
-  }
-  .stats{
-    flex-direction: column;
-  }
-  .stats div{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-   .stats div:not(:last-child) {
-    margin-bottom: 20px;
-   }
 }
-
-/*Medium devices (tablets, 768px and up)*/
-@media (max-width: 768px) {}
-
-/*Large devices (desktops, 992px and up)*/
-@media (max-width: 992px) {}
-
-/*X-Large devices (large desktops, 1200px and up)*/
-@media (max-width: 1200px) {}
-
-/*XX-Large devices (larger desktops, 1400px and up)*/
-@media (max-width: 1400px) {}
