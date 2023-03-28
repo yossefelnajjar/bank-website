@@ -20,7 +20,7 @@ Single Page Application Using React.js, Tailwind
 - Tailwind css
 - React.js
 
-### features
+### Features
 
 - Modern UI/UX
 - Semantic HTML5 markup
