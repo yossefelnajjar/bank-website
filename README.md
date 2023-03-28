@@ -10,7 +10,7 @@ Single Page Application Using React.js, Tailwind
 
 ### Links
 
-- Live Site URL: [live site URL](https://yousef-hoobank.netlify.app/)
+- [Live Site URL](https://yousef-hoobank.netlify.app/)
 
 ### Built with
 
