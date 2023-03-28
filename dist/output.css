@@ -559,10 +559,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
 .fixed {
   position: fixed;
 }
@@ -908,10 +904,6 @@ video {
 .duration-300 {
   transition-duration: 300ms;
 }
-
-/* @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
 
 body {
   background-color: rgb(0, 0, 0);
