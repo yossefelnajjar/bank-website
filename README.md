@@ -6,7 +6,7 @@ Single Page Application Using React.js, Tailwind
 
 ### Screenshot
 
-(./src/assets/screenshot.png)
+![](./src/assets/screenshot.png)
 
 ### Links
 
